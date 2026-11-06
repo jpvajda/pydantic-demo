@@ -1,0 +1,13 @@
+[
+  {"order_id": "ORD-001", "user_id": 1, "sku": "WIDGET", "quantity": 2, "unit_price": 9.5},
+  {"order_id": "ORD-002", "user_id": 2, "sku": "GADGET", "quantity": 1, "unit_price": 19.0},
+  {"order_id": "ORD-003", "user_id": 3, "sku": "CABLE", "quantity": 4, "unit_price": 3.25},
+  {"order_id": "ORD-SLOW", "user_id": 4, "sku": "LAMP", "quantity": 1, "unit_price": 24.0},
+  {"order_id": "ORD-005", "user_id": 5, "sku": "DESK", "quantity": 1, "unit_price": 120.0},
+  {"order_id": "ORD-006", "user_id": 6, "sku": "CHAIR", "quantity": 2, "unit_price": 80.0},
+  {"order_id": "ORD-007", "user_id": 7, "sku": "MOUSE", "quantity": 3, "unit_price": 15.0},
+  {"order_id": "ORD-BAD-QTY", "user_id": 8, "sku": "KEY", "quantity": 0, "unit_price": 5.0},
+  {"order_id": "ORD-BAD-PRICE", "user_id": 9, "sku": "PAD", "quantity": 1, "unit_price": -1},
+  {"order_id": "ORD-BAD-SKU", "user_id": 10, "sku": "", "quantity": 1, "unit_price": 2.0},
+  {"order_id": "ORD-MISSING", "user_id": 99, "sku": "GHOST", "quantity": 1, "unit_price": 7.0}
+]
