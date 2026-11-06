@@ -1,0 +1,10 @@
+.venv/
+.logfire/
+__pycache__/
+*.py[cod]
+*.db
+.DS_Store
+
+.cursor/
+.agents/
+skills-lock.json
