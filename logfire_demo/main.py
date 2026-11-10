@@ -1,17 +1,22 @@
 import argparse
+import sys
 from pathlib import Path
 
 import logfire
 
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE.parent))
+from logfire_setup import configure_logfire
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Validate, enrich, and store orders.")
-    parser.add_argument("--orders", type=Path, default=Path("orders.json"))
-    parser.add_argument("--db", type=Path, default=Path("orders.db"))
+    parser.add_argument("--orders", type=Path, default=HERE / "orders.json")
+    parser.add_argument("--db", type=Path, default=HERE / "orders.db")
     args = parser.parse_args()
 
     # configure() first. instrument_pydantic() must run before models are imported.
-    logfire.configure(service_name="order-pipeline", service_version="0.1.0", environment="dev")
+    configure_logfire("order-pipeline")
     logfire.instrument_pydantic(record="failure")
     logfire.instrument_httpx()
     logfire.instrument_sqlite3()
