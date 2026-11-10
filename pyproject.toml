@@ -5,7 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "google-genai>=3.0.0",
     "httpx>=0.28.1",
-    "logfire[httpx,sqlite3]>=5.4.0",
+    "logfire[google-genai,httpx,sqlite3]>=5.4.0",
     "pydantic>=2.14.3",
+    "pydantic-evals[logfire]>=2.66.0",
 ]
